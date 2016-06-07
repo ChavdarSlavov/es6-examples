@@ -13,7 +13,7 @@ $ npm install
 
 ## Commands 
 
-Start environment (http://localhost:3000): 
+Start environment - http://localhost:3000: 
 ```sh
 $ npm start
 ``` 
