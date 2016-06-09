@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "webpack.config.js",
-  "dependencies": {},
+  "dependencies": {
+    "lodash": "^4.13.1"
+  },
   "devDependencies": {
     "babel-core": "^6.9.0",
     "babel-loader": "^6.2.4",

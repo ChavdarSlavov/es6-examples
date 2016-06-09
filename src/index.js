@@ -1,5 +1,22 @@
-import { sumArray } from './calc.js'
+import Deck from './Deck';
+import BeloteDealer from './BeloteDealer';
+import Player from './Player';
 
-let myArray = [1, 2, 3, 8];
-let result = sumArray(myArray);
-document.write(myArray.join("+"), '=', result);
+let players = [
+	new Player('Slavcho'),
+	new Player('Mladen'),
+	new Player('Ivan'),
+	new Player('Dani')
+];
+
+let chavo = new BeloteDealer(players);
+chavo.deal();
+
+var output = players.map( (player) => {
+	const cards = player.showHand().join(" ");
+	return `
+		<h3 style="margin-bottom: 0;">${player.name}</h3>
+		<div>Cards: ${cards}</div>
+	`;
+}).join("");
+document.write(output);
